@@ -2,6 +2,9 @@ sudo: required
 services:
   - docker
 before_install :
+  - echo "BEFORE INSTALL START"
+  - gem install bundler
+  - echo "BEFORE INSTALL END"
   - docker build -t sivamsis/docker-react -f Dockerfile.dev .
 
 scriipt:
