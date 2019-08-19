@@ -4,6 +4,8 @@ services:
 before_install :
   - echo "BEFORE INSTALL START"
   - gem install bundler
+  - echo "BEFORE INSTALL END AND BEFORE RAKE START"
+  - rake spec
   - echo "BEFORE INSTALL END"
   - docker build -t sivamsis/docker-react -f Dockerfile.dev .
 
